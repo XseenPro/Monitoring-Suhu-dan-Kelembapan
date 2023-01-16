@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "author": "Azkal Azkiya 21.83.0741",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -79.8, "left": 31.6, "attrs": {} },
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 97.1,
+      "left": -9.6,
+      "rotate": 90,
+      "attrs": { "env": "micropython-20220618-v1.19.1" }
+    },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -143.7, "left": 119.4, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 17.5,
+      "left": 114,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "bb1:9t.a", "", [ "$bb" ] ],
+    [ "dht1:SDA", "bb1:10t.a", "", [ "$bb" ] ],
+    [ "dht1:NC", "bb1:11t.a", "", [ "$bb" ] ],
+    [ "dht1:GND", "bb1:12t.a", "", [ "$bb" ] ],
+    [ "r1:1", "bb1:10t.d", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:10b.h", "", [ "$bb" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v304.2", "h-166.23" ] ],
+    [ "bb1:10b.j", "esp:3V3", "red", [ "v208.6", "h-152.37" ] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v312.87", "h-142.1" ] ],
+    [ "esp:D14", "dht1:SDA", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
