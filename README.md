@@ -1,5 +1,7 @@
 # Monitoring-Suhu-dan-Kelembapan-pada-Penetasan-telur
-
-### NAMA : AZKAL AZKIYA
-### NIM : 21.83.0741
-### KELAS : 21-TK-03
+<pre>
+NAMA &nbsp;&nbsp;: AZKAL AZKIYA(21.83.0741) & FERY KUSUMA(21.83.0751) </br>
+</pre>
+<pre>
+KELAS&nbsp;&nbsp;: 21-TK-03
+</pre>
